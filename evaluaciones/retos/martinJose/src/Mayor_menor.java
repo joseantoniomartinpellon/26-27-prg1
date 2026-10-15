@@ -8,8 +8,11 @@ public class Mayor_menor {
         System.out.println("introduce tu edad");
         int edad = scanner.nextInt();
 
-        String mensaje = edad < 18 ? "Eres menor de edad" : "Eres mayor de edad";
+        String mensaje =  "Eres " + (edad < 18 ? "mayor" : "menor") + " de edad";
+
         System.out.println(mensaje);
+
+
     }
     
 }
