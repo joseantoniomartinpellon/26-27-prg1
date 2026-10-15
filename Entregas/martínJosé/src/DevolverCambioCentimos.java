@@ -51,22 +51,24 @@ class DevolverCambioCentimos{
         
         int cents1 = (int)(centimosadevolver);
 
-        String mensaje = " billetes/monedas de";
+        String mensaje1 = " billetes de";
+        String mensaje2 = " monedas de";
         
-        System.out.println(billetesde100 + mensaje + " 100");
-        System.out.println(billetesde50 + mensaje + " 50");
-        System.out.println(billetesde20 + mensaje + " 20");
-        System.out.println(billetesde10 + mensaje + " 10");
-        System.out.println(billetesde5 + mensaje + " 5");
-        System.out.println(monedasde2 + mensaje + " 2");
-        System.out.println(monedasde1 + mensaje +" 1");
+        System.out.println(billetesde100 + mensaje1 + " 100");
+        System.out.println(billetesde50 + mensaje1 + " 50");
+        System.out.println(billetesde20 + mensaje1 + " 20");
+        System.out.println(billetesde10 + mensaje1 + " 10");
+        System.out.println(billetesde5 + mensaje1 + " 5");
+        System.out.println(monedasde2 + mensaje2 + " 2");
+        System.out.println(monedasde1 + mensaje2 +" 1");
 
 
-        System.out.println(cents50 + mensaje + " 0.50");
-        System.out.println(cents20 + mensaje + " 0.20");
-        System.out.println(cents10 + mensaje + " 0.10");
-        System.out.println(cents5 + mensaje + " 0.05");
-        System.out.println(cents2 + mensaje + " 0.02");
-        System.out.println(cents1 + mensaje + " 0.01");
+        System.out.println(cents50 + mensaje2 + " 0.50");
+        System.out.println(cents20 + mensaje2 + " 0.20");
+        System.out.println(cents10 + mensaje2 + " 0.10");
+        System.out.println(cents5 + mensaje2 + " 0.05");
+        System.out.println(cents2 + mensaje2 + " 0.02");
+        System.out.println(cents1 + mensaje2 + " 0.01");
+
     }
 }
