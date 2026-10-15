@@ -4,28 +4,32 @@ class DevolverCambio{
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduce la cantidad a pagar: ");
+        int cantidadAPagar =scanner.nextInt();
+        
+        System.out.print("Introduce la cantidad recibida: ");
+        int cantidadRecibida =scanner.nextInt();
 
-        int cantidad =scanner.nextInt();
+        int cantidadadevolver = cantidadRecibida - cantidadAPagar;
+
+        int billetesde100 =cantidadadevolver /100;
+        cantidadadevolver = cantidadadevolver % 100;
         
-        int billetesde100 =cantidad /100;
-        cantidad = cantidad % 100;
+        int billetesde50 = cantidadadevolver / 50;
+        cantidadadevolver = cantidadadevolver % 50;
         
-        int billetesde50 = cantidad / 50;
-        cantidad = cantidad % 50;
+        int billetesde20 = cantidadadevolver / 20;
+        cantidadadevolver = cantidadadevolver % 20;
         
-        int billetesde20 = cantidad / 20;
-        cantidad = cantidad % 20;
+        int billetesde10 = cantidadadevolver / 10;
+        cantidadadevolver = cantidadadevolver % 10;
         
-        int billetesde10 = cantidad / 10;
-        cantidad = cantidad % 10;
+        int billetesde5 = cantidadadevolver / 5;
+        cantidadadevolver = cantidadadevolver % 5;
         
-        int billetesde5 = cantidad / 5;
-        cantidad = cantidad % 5;
+        int monedasde2 = cantidadadevolver / 2;
+        cantidadadevolver = cantidadadevolver % 2;
         
-        int monedasde2 = cantidad / 2;
-        cantidad = cantidad % 2;
-        
-        int monedasde1 = cantidad;
+        int monedasde1 = cantidadadevolver;
 
         String mensaje = " billetes/monedas de";
         
