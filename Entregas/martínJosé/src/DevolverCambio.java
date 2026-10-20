@@ -4,41 +4,40 @@ class DevolverCambio{
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduce la cantidad a pagar: ");
-        int cantidadAPagar =scanner.nextInt();
-        
+        final int CANTIDADAPAGAR =scanner.nextInt();
         System.out.print("Introduce la cantidad recibida: ");
-        int cantidadRecibida =scanner.nextInt();
+        final int CANTIDADRECIBIDA =scanner.nextInt();
 
-        int cantidadadevolver = cantidadRecibida - cantidadAPagar;
+        int cantidadadevolver = CANTIDADRECIBIDA - CANTIDADAPAGAR;
+        final int VALOREUROS100 = 100;
+        final int VALOREUROS50 = 50;
+        final int VALOREUROS20 = 20;
+        final int VALOREUROS10 = 10;
+        final int VALOREUROS5 = 5;
+        final int VALOREUROS2 = 2;
+        final int VALOREUROS1 = 1;
 
-        int billetesde100 =cantidadadevolver /100;
-        cantidadadevolver = cantidadadevolver % 100;
-        
-        int billetesde50 = cantidadadevolver / 50;
-        cantidadadevolver = cantidadadevolver % 50;
-        
-        int billetesde20 = cantidadadevolver / 20;
-        cantidadadevolver = cantidadadevolver % 20;
-        
-        int billetesde10 = cantidadadevolver / 10;
-        cantidadadevolver = cantidadadevolver % 10;
-        
-        int billetesde5 = cantidadadevolver / 5;
-        cantidadadevolver = cantidadadevolver % 5;
-        
-        int monedasde2 = cantidadadevolver / 2;
-        cantidadadevolver = cantidadadevolver % 2;
-        
+        int billetesde100 =cantidadadevolver /VALOREUROS100;
+        cantidadadevolver = cantidadadevolver % VALOREUROS100;
+        int billetesde50 = cantidadadevolver / VALOREUROS50;
+        cantidadadevolver = cantidadadevolver % VALOREUROS50;
+        int billetesde20 = cantidadadevolver / VALOREUROS20;
+        cantidadadevolver = cantidadadevolver % VALOREUROS20;
+        int billetesde10 = cantidadadevolver / VALOREUROS10;
+        cantidadadevolver = cantidadadevolver % VALOREUROS10;
+        int billetesde5 = cantidadadevolver / VALOREUROS5;
+        cantidadadevolver = cantidadadevolver % VALOREUROS5; 
+        int monedasde2 = cantidadadevolver / VALOREUROS2;
+        cantidadadevolver = cantidadadevolver % VALOREUROS2;
         int monedasde1 = cantidadadevolver;
 
-        String mensaje = " billetes/monedas de";
-        
-        System.out.println(billetesde100 + mensaje + " 100");
-        System.out.println(billetesde50 + mensaje + " 50");
-        System.out.println(billetesde20 + mensaje + " 20");
-        System.out.println(billetesde10 + mensaje + " 10");
-        System.out.println(billetesde5 + mensaje + " 5");
-        System.out.println(monedasde2 + mensaje + " 2");
-        System.out.println(monedasde1 + mensaje +" 1");
+        final String MENSAJE = " billetes/monedas de ";
+        System.out.println(billetesde100 + MENSAJE + VALOREUROS100);
+        System.out.println(billetesde50 + MENSAJE + VALOREUROS50);
+        System.out.println(billetesde20 + MENSAJE + VALOREUROS20);
+        System.out.println(billetesde10 + MENSAJE + VALOREUROS10);
+        System.out.println(billetesde5 + MENSAJE + VALOREUROS5);
+        System.out.println(monedasde2 + MENSAJE + VALOREUROS2);
+        System.out.println(monedasde1 + MENSAJE + VALOREUROS1);
     }
 }

@@ -4,71 +4,67 @@ class DevolverCambioCentimos{
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduce la cantidad a pagar: ");
-        double cantidadAPagar =scanner.nextDouble();
+        final double CANTIDADAPAGAR =scanner.nextDouble();
         
         System.out.print("Introduce la cantidad recibida: ");
-        double cantidadRecibida =scanner.nextDouble();
+        final double CANTIDADRECIVIDA =scanner.nextDouble();
 
-        double cantidadadevolver = cantidadRecibida - cantidadAPagar;
+        double cantidadadevolver = CANTIDADRECIVIDA - CANTIDADAPAGAR;
+        final int VALOREUROS100 = 100;
+        final int VALOREUROSOCENTIMOS50 = 50;
+        final int VALOREUROSOCENTIMOS20 = 20;
+        final int VALOREUROSOCENTIMOS10 = 10;
+        final int VALOREUROSOCENTIMOS5 = 5;
+        final int VALOREUROSOCENTIMOS2 = 2;
+        final int VALOREUROSOCENTIMOS1 = 1;
 
-        int billetesde100 = (int)(cantidadadevolver / 100);
-        cantidadadevolver = cantidadadevolver % 100;
-        
-        int billetesde50 = (int) cantidadadevolver / 50;
-        cantidadadevolver = cantidadadevolver % 50;
-        
-        int billetesde20 = (int)cantidadadevolver / 20;
-        cantidadadevolver = cantidadadevolver % 20;
-        
-        int billetesde10 = (int)cantidadadevolver / 10;
-        cantidadadevolver = cantidadadevolver % 10;
-        
-        int billetesde5 = (int)cantidadadevolver / 5;
-        cantidadadevolver = cantidadadevolver % 5;
-        
-        int monedasde2 = (int)cantidadadevolver / 2;
-        cantidadadevolver = cantidadadevolver % 2;
-    
+        int billetesde100 = (int)(cantidadadevolver / VALOREUROS100);
+        cantidadadevolver = cantidadadevolver % VALOREUROS100;
+        int billetesde50 = (int) cantidadadevolver / VALOREUROSOCENTIMOS50;
+        cantidadadevolver = cantidadadevolver % VALOREUROSOCENTIMOS50;
+        int billetesde20 = (int)cantidadadevolver / VALOREUROSOCENTIMOS20;
+        cantidadadevolver = cantidadadevolver % VALOREUROSOCENTIMOS20;
+        int billetesde10 = (int)cantidadadevolver / VALOREUROSOCENTIMOS10;
+        cantidadadevolver = cantidadadevolver % VALOREUROSOCENTIMOS10;
+        int billetesde5 = (int)cantidadadevolver / VALOREUROSOCENTIMOS5;
+        cantidadadevolver = cantidadadevolver % VALOREUROSOCENTIMOS5;
+        int monedasde2 = (int)cantidadadevolver / VALOREUROSOCENTIMOS2;
+        cantidadadevolver = cantidadadevolver % VALOREUROSOCENTIMOS2;
         int monedasde1 = (int)cantidadadevolver;
         cantidadadevolver = cantidadadevolver - monedasde1;
 
-        int centimosadevolver = (int)(cantidadadevolver * 100);
-
-        int cents50 = (int)(centimosadevolver / 50);
-        centimosadevolver = centimosadevolver % 50;
-        
-        int cents20 = (int)(centimosadevolver / 20);
-        centimosadevolver = centimosadevolver % 20;
-        
-        int cents10 = (int)(centimosadevolver / 10);
-        centimosadevolver = centimosadevolver % 10;
-        
-        int cents5 = (int)(centimosadevolver / 5);
-        centimosadevolver = centimosadevolver % 5;
-        
-        int cents2 = (int)(centimosadevolver / 2);
-        centimosadevolver = centimosadevolver % 2;
-        
+        final double DECIMALAENTERO = 100;
+        int centimosadevolver = (int)(cantidadadevolver * DECIMALAENTERO);
+        int cents50 = (int)(centimosadevolver / VALOREUROSOCENTIMOS50);
+        centimosadevolver = centimosadevolver % VALOREUROSOCENTIMOS50;
+        int cents20 = (int)(centimosadevolver / VALOREUROSOCENTIMOS20);
+        centimosadevolver = centimosadevolver % VALOREUROSOCENTIMOS20;
+        int cents10 = (int)(centimosadevolver / VALOREUROSOCENTIMOS10);
+        centimosadevolver = centimosadevolver % VALOREUROSOCENTIMOS10;
+        int cents5 = (int)(centimosadevolver / VALOREUROSOCENTIMOS5);
+        centimosadevolver = centimosadevolver % VALOREUROSOCENTIMOS5;
+        int cents2 = (int)(centimosadevolver / VALOREUROSOCENTIMOS2);
+        centimosadevolver = centimosadevolver % VALOREUROSOCENTIMOS2;
         int cents1 = (int)(centimosadevolver);
 
-        String mensaje1 = " billetes de";
-        String mensaje2 = " monedas de";
-        
-        System.out.println(billetesde100 + mensaje1 + " 100");
-        System.out.println(billetesde50 + mensaje1 + " 50");
-        System.out.println(billetesde20 + mensaje1 + " 20");
-        System.out.println(billetesde10 + mensaje1 + " 10");
-        System.out.println(billetesde5 + mensaje1 + " 5");
-        System.out.println(monedasde2 + mensaje2 + " 2");
-        System.out.println(monedasde1 + mensaje2 +" 1");
+
+        final String MENSAJE1 = " billetes de ";
+        final String MENSAJE2 = " monedas de ";
+        System.out.println(billetesde100 + MENSAJE1 + VALOREUROS100);
+        System.out.println(billetesde50 + MENSAJE1 + VALOREUROSOCENTIMOS50);
+        System.out.println(billetesde20 + MENSAJE1 + VALOREUROSOCENTIMOS20);
+        System.out.println(billetesde10 + MENSAJE1 + VALOREUROSOCENTIMOS10);
+        System.out.println(billetesde5 + MENSAJE1 + VALOREUROSOCENTIMOS5);
+        System.out.println(monedasde2 + MENSAJE2 + VALOREUROSOCENTIMOS2);
+        System.out.println(monedasde1 + MENSAJE2 + VALOREUROSOCENTIMOS1);
 
 
-        System.out.println(cents50 + mensaje2 + " 0.50");
-        System.out.println(cents20 + mensaje2 + " 0.20");
-        System.out.println(cents10 + mensaje2 + " 0.10");
-        System.out.println(cents5 + mensaje2 + " 0.05");
-        System.out.println(cents2 + mensaje2 + " 0.02");
-        System.out.println(cents1 + mensaje2 + " 0.01");
+        System.out.println(cents50 + MENSAJE2 + VALOREUROSOCENTIMOS50/DECIMALAENTERO);
+        System.out.println(cents20 + MENSAJE2 + VALOREUROSOCENTIMOS20/DECIMALAENTERO);
+        System.out.println(cents10 + MENSAJE2 + VALOREUROSOCENTIMOS10/DECIMALAENTERO);
+        System.out.println(cents5 + MENSAJE2 + VALOREUROSOCENTIMOS5/DECIMALAENTERO);
+        System.out.println(cents2 + MENSAJE2 + VALOREUROSOCENTIMOS2/DECIMALAENTERO);
+        System.out.println(cents1 + MENSAJE2 + VALOREUROSOCENTIMOS1/DECIMALAENTERO);
 
     }
 }
